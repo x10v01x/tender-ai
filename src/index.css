@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "PingFang SC", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #004e9f;
+  --color-primary-container: #0066cc;
+  --color-surface: #f9f9fb;
+  --color-surface-container-low: #f3f3f5;
+  --color-surface-container-high: #e8e8ea;
+  --color-surface-container-highest: #e2e2e4;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1a1c1d;
+  --color-on-surface-variant: #414753;
+  --color-outline-variant: #c1c6d5;
+  --color-success: #34C759;
+  --color-warning: #FF9500;
+  --color-error: #FF3B30;
+
+  --shadow-premium: 0 4px 20px rgba(26, 28, 29, 0.06);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/70 backdrop-blur-xl border-b border-white/10;
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-premium;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-surface-container-highest rounded-full;
+}
+
+.a4-page {
+  width: 210mm;
+  height: 297mm;
+  @apply bg-white shadow-premium mx-auto;
+}
